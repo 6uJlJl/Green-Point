@@ -1,1 +1,101 @@
 .offer
+  background-color: $section-bg
+  padding-bottom: 100px
+  &__title
+    text-align: left
+  &__items
+    position: relative
+    margin-top: 60px
+    margin-bottom: 70px
+  &__left
+    position: absolute
+    width: 56px
+    height: 66px
+    outline: none
+    background: url("../img/offer/offer-left.png") no-repeat center
+    top: -110px
+    right: 160px
+    cursor: pointer
+  &__right
+    position: absolute
+    width: 56px
+    height: 66px
+    outline: none
+    background: url("../img/offer/offer-right.png") no-repeat center
+    top: -110px
+    right: 80px
+    cursor: pointer
+  &__item
+    min-height: 360px
+    width: 360px
+    background-color: #fff
+    margin: 79px 20px 0 20px
+    outline: none
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.04)
+    border-radius: 3px
+    padding: 20px
+    img
+      margin-top: -79px
+      margin-bottom: 20px
+  &__names
+    display: flex
+    justify-content: space-between
+  &__name
+    color: $description-color
+    font-size: 16px
+    +f300
+    line-height: 24px
+    position: relative
+  &__icons
+    display: flex
+  &__icon
+    display: block
+    width: 22px
+    height: 22px
+    background: url('../img/icons.png') no-repeat center
+    background-position-y: -39px
+    margin-left: 10px
+    &--pool
+      background-position-x: 0
+    &--trees
+      background-position-x: -22px
+    &--water
+      background-position-x: -44px
+  &__price
+    display: block
+    margin: 20px 0
+    color: $link-color
+    font-size: 20px
+    +f700
+    line-height: 24px
+  &__description
+    color: $description-color
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    font-size: 15px
+    +f300
+    line-height: 24px
+    margin-bottom: 20px
+  &__link
+    color: $dark
+    +f500
+    line-height: 50px
+    letter-spacing: 0.45px
+    border-bottom: 1px dotted
+  &__buttons
+    display: flex
+    justify-content: center
+    align-items: center
+    a
+      max-width: 256px
+      text-align: center
+      margin-left: 30px
+      line-height: 25px
+      letter-spacing: 0.45px
+      text-decoration: underline
+      text-decoration-style: dotted
+      text-decoration-color: #ccc
+
+
+
