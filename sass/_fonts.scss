@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin f300 {
+  font-family: 'Montserrat-Light', sans-serif
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin f500 {
+    font-family: 'Montserrat', sans-serif
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-weight: bold;
+    font-style: normal;
+}
+@mixin f700 {
+    font-family: 'Montserrat-Bold', sans-serif;
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url('../fonts/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-weight: bold;
+  font-style: normal;
+}
+@mixin f800 {
+  font-family: 'Montserrat-ExtraBold', sans-serif
+}

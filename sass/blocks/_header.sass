@@ -1,0 +1,94 @@
+.header
+  background: url("../img/header/header_bg.jpg") no-repeat center
+  background-size: cover
+  height: 50vmax
+  padding: 30px 0 128px
+  &__wrapper
+    display: flex
+  &__logo
+    margin-right: 30px
+  &__right
+    width: 100%
+  &__contacts
+    display: flex
+    justify-content: space-between
+  &__office
+    font-size: 15px
+    line-height: 50px
+    text-transform: uppercase
+    letter-spacing: 0.45px
+    +f800
+  &__phone
+    font-size: 20px
+    line-height: 50px
+    letter-spacing: 0.6px
+    margin-right: 29px
+  &__nav
+    margin-top: 20px
+    ul
+      display: flex
+      justify-content: space-between
+      list-style: none
+      margin: 0
+      padding: 0
+      li
+        font-size: 17px
+        line-height: 50px
+        letter-spacing: 0.51px
+        +f300
+  &__center
+    margin-top: 15vmin
+  &__title
+    font-size: 65px
+    +f700
+    letter-spacing: 1.95px
+    text-shadow: 2px 1px 2px white, 0 0 1em white
+  &__subtitle
+    font-size: 25px
+    +f300
+    letter-spacing: 0.75px
+    text-shadow: 8px 8px 10px white, -8px 8px 10px white, 8px -8px 10px white, -8px -8px 10px white, 8px 8px 10px white, -8px 8px 10px white, 8px -8px 10px white, -8px -8px 10px white, 4px 4px 10px white, -4px 4px 10px white, 4px -4px 10px white, -4px -4px 10px white
+    margin-bottom: 35px
+  &__excursion
+    margin-left: 20px
+    color: $button-text
+    font-size: 15px
+    line-height: 50px
+    letter-spacing: 0.45px
+    text-shadow: 8px 8px 10px white, -8px 8px 10px white, 8px -8px 10px white, -8px -8px 10px white, 8px 8px 10px white, -8px 8px 10px white, 8px -8px 10px white, -8px -8px 10px white, 4px 4px 10px white, -4px 4px 10px white, 4px -4px 10px white, -4px -4px 10px white
+    border-bottom: 2px dotted
+  &__bottom
+    margin-top: 20vmin
+    ul
+      display: flex
+      display: flex
+      justify-content: space-around
+      list-style: none
+      margin: 0
+      padding: 0
+      li
+        display: flex
+        align-items: center
+        font-size: 19px
+        letter-spacing: 0.57px
+        color: white
+.bottom
+  &__item
+    display: inline-block
+    width: 39px
+    height: 39px
+    margin-right: 15px
+    background: url("../img/header/header-sprite.png") no-repeat center
+    &--200
+      background-position-x: 0
+    &--houses
+      background-position-x: -39px
+    &--1500
+      background-position-x: -78px
+    &--11
+      background-position-x: -117px
+  &__text
+    display: inline-block
+    line-height: 39px
+    vertical-align: middle
+

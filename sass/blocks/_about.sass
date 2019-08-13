@@ -1,0 +1,26 @@
+.about
+  margin-top: 100px
+  &__hidden
+    display: none
+  &__title
+    font-size: 50px
+    +f700
+    line-height: 50px
+    letter-spacing: 1.5px
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      height: 10px
+      width: 289px
+      background-color: $title-bg
+      left: 0
+      bottom: 8px
+      z-index: -1
+  &__image
+    float: right
+    margin: 25px 0 42px 42px
+  &__description
+    color: $description-color
+    a
+      color: $title-bg
