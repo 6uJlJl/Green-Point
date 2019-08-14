@@ -668,7 +668,7 @@ a {
 
 .why__subtitle {
   display: block;
-  padding-top: 160px;
+  padding-top: 135px;
   color: #ffffff;
   font-size: 25px;
   font-family: 'Montserrat-Light', sans-serif;
@@ -683,6 +683,7 @@ a {
   font-family: 'Montserrat-Bold', sans-serif;
   letter-spacing: 1.5px;
   color: #35aa46;
+  margin-bottom: 60px;
 }
 
 .why__items {
@@ -694,7 +695,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .why__item {
@@ -711,13 +712,13 @@ a {
           align-items: center;
   text-align: center;
   color: #f7f7f7;
-  margin-bottom: 80px;
+  margin-bottom: 65px;
 }
 
 .why__item img {
   width: 129px;
   height: 129px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .why__text {
@@ -730,13 +731,18 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
 }
 
 .why__desctiption {
   font-family: 'Montserrat-Light', sans-serif;
-  line-height: 24px;
+  line-height: 30px;
+}
+
+.photos {
+  padding-top: 50px;
+  padding-bottom: 90px;
 }
 
 .photos__title {
@@ -885,7 +891,7 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 70px;
+  margin-bottom: 75px;
 }
 
 .town__filters {
@@ -895,7 +901,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 30px 50px;
+  margin-bottom: 40px;
 }
 
 .town__buttons {
@@ -904,6 +910,19 @@ a {
 
 .town__btn--order {
   margin-right: 30px;
+}
+
+.town__items .offer__item {
+  margin: 79px 0 0;
+  padding-bottom: 10px;
+}
+
+.town__items .offer__item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.town__items .offer__item .offer__price {
+  margin-top: 10px;
 }
 
 .filter {
@@ -919,7 +938,7 @@ a {
   color: #494848;
   font-size: 12px;
   line-height: 24px;
-  padding: 8px 17px;
+  padding: 10px 14px;
   border-radius: 40px;
   border: 1px solid #35aa46;
   margin-right: 10px;
@@ -934,7 +953,12 @@ a {
   background-image: linear-gradient(to bottom, rgba(84, 210, 102, 0) 7%, rgba(84, 210, 102, 0.96) 92%, #54d266 96%);
 }
 
+.apparts {
+  padding-bottom: 100px;
+}
+
 .houses {
+  padding-bottom: 100px;
   background-color: #f7f7f7;
 }
 
@@ -942,7 +966,7 @@ a {
   min-height: 489px;
   background: url("../img/best/best-bg.jpg") no-repeat center;
   background-size: cover;
-  padding-top: 100px;
+  padding-top: 55px;
 }
 
 .best__title {
@@ -951,6 +975,7 @@ a {
   font-family: 'Montserrat-Bold', sans-serif;
   line-height: 50px;
   letter-spacing: 1.05px;
+  margin-bottom: 25px;
 }
 
 .best__items {
@@ -977,8 +1002,12 @@ a {
   letter-spacing: 0.45px;
 }
 
+.video {
+  padding-bottom: 45px;
+}
+
 .video__title {
-  margin-top: 100px;
+  margin-top: 95px;
   text-align: center;
   font-size: 50px;
   font-family: 'Montserrat-Bold', sans-serif;
@@ -998,8 +1027,8 @@ a {
   z-index: -1;
 }
 
-.video__wrapper {
-  height: 600px;
+.map {
+  padding-bottom: 110px;
 }
 
 .form {
@@ -1008,8 +1037,9 @@ a {
   margin: 0 auto;
   background: url("../img/form/form-bg.jpg") no-repeat center;
   background-size: cover;
-  padding: 100px 120px 130px;
+  padding: 80px 120px 130px;
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .form__title {
@@ -1145,13 +1175,15 @@ a {
   color: #32a946;
   font-size: 16px;
   font-family: 'Montserrat-Bold', sans-serif;
-  line-height: 50px;
+  line-height: 40px;
   letter-spacing: 0.48px;
 }
 
 .footer__btn {
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.36px;
+  height: 40px;
+  line-height: 30px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="/css/slick.css">
   <link rel="stylesheet" href="/css/slick-theme.css">
   <link rel="stylesheet" href="/css/basic.css">
@@ -1136,10 +1137,10 @@
             <p class="form__title">Если Вас заинтересовали предложения в поселке <span class="form__bold"><span class="form__green">Зеленый Мыс</span>, приезжайте к нам на экскурсию!</span></p>
             <div class="form__input-items">
               <div class="form__inputs">
-                <input class="form__input-text" type="text" name="name" placeholder="Имя">
-                <input class="form__input-text" type="text" name="phone" placeholder="Телефон">
+                <input class="form__input-text" type="text" name="name" placeholder="Имя" required>
+                <input class="form__input-text" type="text" name="phone" placeholder="Телефон" required>
               </div>
-              <textarea class="form__textarea" name="text" cols="30" rows="10">Сообщение</textarea>
+              <textarea class="form__textarea" name="text" cols="30" rows="10" required>Сообщение</textarea>
             </div>
             <input class="btn" type="submit" value="Забронировать экскурсию">
           </form>
@@ -1163,7 +1164,7 @@
                 </ul>
               </nav>
               <div class="footer__callback">
-                <a href="tel:+74951201248">+7 (495) 1200-12-48</a>
+                <a href="tel:+74951201248">+7 (495) 120-12-48</a>
                 <input type="button" class="btn btn--transparent footer__btn" value="Продать Дом">
               </div>
           </div>
@@ -1173,6 +1174,7 @@
 
 
   <script src="/js/jquery-3.4.1.min.js" defer></script>
+  <script src="/js/jquery.fancybox.min.js" defer></script>
   <script src="/js/slick.min.js" defer></script>
   <script src="/js/main.js" defer></script>
 </body>
