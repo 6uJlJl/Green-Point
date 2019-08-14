@@ -5,20 +5,22 @@
   background-size: cover
   &__text
     +f300
+    text-align: center
     line-height: 20px
     letter-spacing: 0.45px
   &__items
     margin-top: 25px
     display: flex
     flex-wrap: wrap
-  &__item
-    margin: 15px
+  &__item:not(:nth-child(3n))
+    margin: 15px 30px 5px 0
+  &__item:nth-child(3n)
+    margin: 15px 0 5px 0
   &__img
     display: inline-block
     overflow: hidden
     width: 360px
     height: 220px
-    margin-bottom: 10px
     img
         transition: 0.5s
     img:hover

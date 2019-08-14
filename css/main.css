@@ -37,14 +37,11 @@ body, html {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 
 a {
   color: #00224c;
-}
-
-section {
-  padding-bottom: 100px;
 }
 
 .btn {
@@ -88,6 +85,7 @@ section {
 .center__title {
   padding-top: 90px;
   margin-top: 0;
+  margin-bottom: 35px;
   text-align: center;
   font-size: 50px;
   font-family: 'Montserrat-Bold', sans-serif;
@@ -98,7 +96,7 @@ section {
 .header {
   background: url("../img/header/header_bg.jpg") no-repeat center;
   background-size: cover;
-  height: 50vmax;
+  height: 950px;
   padding: 30px 0 128px;
 }
 
@@ -109,11 +107,18 @@ section {
 }
 
 .header__logo {
-  margin-right: 30px;
+  display: block;
+  min-width: 165px;
+  min-height: 139px;
+}
+
+.header__logo img {
+  width: 100%;
 }
 
 .header__right {
   width: 100%;
+  margin-top: 25px;
 }
 
 .header__contacts {
@@ -126,6 +131,7 @@ section {
 }
 
 .header__office {
+  margin-left: 30px;
   font-size: 15px;
   line-height: 50px;
   text-transform: uppercase;
@@ -140,8 +146,13 @@ section {
   margin-right: 29px;
 }
 
+.header__btn {
+  width: 225px;
+}
+
 .header__nav {
-  margin-top: 20px;
+  margin-left: 30px;
+  margin-top: 8px;
 }
 
 .header__nav ul {
@@ -164,7 +175,7 @@ section {
 }
 
 .header__center {
-  margin-top: 15vmin;
+  margin-top: 110px;
 }
 
 .header__title {
@@ -194,7 +205,7 @@ section {
 }
 
 .header__bottom {
-  margin-top: 20vmin;
+  margin-top: 280px;
 }
 
 .header__bottom ul {
@@ -253,7 +264,8 @@ section {
 }
 
 .about {
-  margin-top: 100px;
+  margin-top: 95px;
+  padding-bottom: 80px;
 }
 
 .about__hidden {
@@ -290,7 +302,8 @@ section {
 
 .about__description p {
   padding-top: 0;
-  padding-bottom: 20px;
+  line-height: 20px;
+  letter-spacing: 0.45px;
 }
 
 .about__description a {
@@ -363,12 +376,13 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   height: 48px;
-  margin-top: 60px;
+  margin-top: 50px;
   font-size: 17px;
+  font-family: 'Montserrat-Bold', sans-serif;
 }
 
 .about-slider__text {
-  margin-top: 29px;
+  margin-top: 10px;
   font-family: 'Montserrat-Light', sans-serif;
 }
 
@@ -381,6 +395,7 @@ section {
 
 .structure__text {
   font-family: 'Montserrat-Light', sans-serif;
+  text-align: center;
   line-height: 20px;
   letter-spacing: 0.45px;
 }
@@ -394,8 +409,12 @@ section {
       flex-wrap: wrap;
 }
 
-.structure__item {
-  margin: 15px;
+.structure__item:not(:nth-child(3n)) {
+  margin: 15px 30px 5px 0;
+}
+
+.structure__item:nth-child(3n) {
+  margin: 15px 0 5px 0;
 }
 
 .structure__img {
@@ -403,7 +422,6 @@ section {
   overflow: hidden;
   width: 360px;
   height: 220px;
-  margin-bottom: 10px;
 }
 
 .structure__img img {
@@ -445,6 +463,7 @@ section {
 
 .offer {
   background-color: #f7f7f7;
+  padding-bottom: 95px;
 }
 
 .offer__title {
@@ -453,8 +472,8 @@ section {
 
 .offer__items {
   position: relative;
-  margin-top: 60px;
-  margin-bottom: 70px;
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
 
 .offer__left {
@@ -464,7 +483,7 @@ section {
   outline: none;
   background: url("../img/offer/offer-left.png") no-repeat center;
   top: -110px;
-  right: 160px;
+  right: 80px;
   cursor: pointer;
 }
 
@@ -475,7 +494,7 @@ section {
   outline: none;
   background: url("../img/offer/offer-right.png") no-repeat center;
   top: -110px;
-  right: 80px;
+  right: 0px;
   cursor: pointer;
 }
 
@@ -483,7 +502,7 @@ section {
   min-height: 360px;
   width: 360px;
   background-color: #fff;
-  margin: 79px 20px 0 20px;
+  margin: 79px 10px 0 10px;
   outline: none;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.04);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.04);
@@ -543,7 +562,7 @@ section {
 
 .offer__price {
   display: block;
-  margin: 20px 0;
+  margin: 20px 0 5px;
   color: #32a946;
   font-size: 20px;
   font-family: 'Montserrat-Bold', sans-serif;
@@ -564,7 +583,7 @@ section {
   font-size: 15px;
   font-family: 'Montserrat-Light', sans-serif;
   line-height: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .offer__link {
@@ -611,6 +630,10 @@ section {
   top: -59px;
 }
 
+.genplan {
+  padding-bottom: 100px;
+}
+
 .genplan__img {
   width: 100%;
 }
@@ -622,6 +645,8 @@ section {
   line-height: 50px;
   letter-spacing: 1.5px;
   position: relative;
+  margin-top: 95px;
+  margin-bottom: 50px;
 }
 
 .genplan__title:after {
