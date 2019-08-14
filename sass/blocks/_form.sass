@@ -1,0 +1,49 @@
+.form
+  max-width: 1000px
+  min-height: 578px
+  margin: 0 auto
+  background: url("../img/form/form-bg.jpg") no-repeat center
+  background-size: cover
+  padding: 100px 120px 130px
+  text-align: center
+  &__title
+    color: #000000
+    font-size: 28px
+    +f300
+    line-height: 50px
+  &__bold
+    +f700
+  &__green
+    color: $why-title
+  &__input-items
+    display: flex
+    justify-content: space-around
+  &__inputs
+    display: flex
+    flex-direction: column
+    width: 293px
+  &__input-text
+    height: 51px
+    border-radius: 26px
+    border: 1px solid #ffffff
+    background-color: #ffffff
+    margin-bottom: 30px
+    padding-left: 30px
+    &::placeholder
+      color: #333333
+      +f300
+      line-height: 24px
+  &__textarea
+    min-width: 390px
+    max-width: 390px
+    min-height: 60px
+    height: 132px
+    border-radius: 26px
+    border: 1px solid #ffffff
+    background-color: #ffffff
+    padding: 15px 30px
+    color: #333333
+    +f300
+    line-height: 24px
+    margin-bottom: 42px
+
