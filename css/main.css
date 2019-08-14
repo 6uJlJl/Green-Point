@@ -222,7 +222,8 @@ a {
   width: 39px;
   height: 39px;
   margin-right: 15px;
-  background: url("../img/header/header-sprite.png") no-repeat center;
+  background: url("../img/icons.png") no-repeat center;
+  background-position-y: 0;
 }
 
 .bottom__item--200 {
@@ -599,5 +600,221 @@ a {
 .genplan__img {
   width: 100%;
   margin-bottom: 100px;
+}
+
+.why {
+  min-height: 1270px;
+  background: url("../img/why/why-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.why__subtitle {
+  display: block;
+  padding-top: 160px;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: 'Montserrat-Light', sans-serif;
+  line-height: 60px;
+  letter-spacing: 0.75px;
+}
+
+.why__title {
+  padding-top: 0;
+  text-align: left;
+  font-size: 50px;
+  font-family: 'Montserrat-Bold', sans-serif;
+  letter-spacing: 1.5px;
+  color: #35aa46;
+}
+
+.why__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 60px;
+}
+
+.why__item {
+  max-width: 360px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #f7f7f7;
+  margin-bottom: 80px;
+}
+
+.why__item img {
+  width: 129px;
+  height: 129px;
+  margin-bottom: 40px;
+}
+
+.why__text {
+  font-size: 17px;
+  line-height: 24px;
+  min-height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.why__desctiption {
+  font-family: 'Montserrat-Light', sans-serif;
+  line-height: 24px;
+}
+
+.photos__title {
+  font-size: 50px;
+  font-family: 'Montserrat-Bold', sans-serif;
+  line-height: 50px;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+.photos__title:after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 367px;
+  background-color: #adddb5;
+  left: 0;
+  bottom: 8px;
+  z-index: -1;
+}
+
+.photos__slide {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-bottom: 90px;
+}
+
+.photos__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  position: relative;
+}
+
+.photos__left img {
+  margin: 15px;
+}
+
+.photos__left::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url("../img/icons.png") no-repeat center;
+  background-position-x: -156px;
+  background-position-y: 0px;
+  top: 35px;
+  left: 35px;
+  cursor: pointer;
+}
+
+.photos__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 66%;
+      flex-basis: 66%;
+}
+
+.photos__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.photos__top img {
+  margin: 15px;
+}
+
+.photos__top--left {
+  position: relative;
+}
+
+.photos__top--left::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url("../img/icons.png") no-repeat center;
+  background-position-x: -156px;
+  background-position-y: 0px;
+  top: 35px;
+  left: 35px;
+  cursor: pointer;
+}
+
+.photos__top--right {
+  position: relative;
+}
+
+.photos__top--right::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url("../img/icons.png") no-repeat center;
+  background-position-x: -156px;
+  background-position-y: 0px;
+  top: 35px;
+  left: 35px;
+  cursor: pointer;
+}
+
+.photos__bottom {
+  position: relative;
+}
+
+.photos__bottom img {
+  margin: 15px;
+}
+
+.photos__bottom::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url("../img/icons.png") no-repeat center;
+  background-position-x: -156px;
+  background-position-y: 0px;
+  top: 35px;
+  left: 35px;
+  cursor: pointer;
+}
+
+.photos__btn--left {
+  top: -90px;
+}
+
+.photos__btn--right {
+  top: -90px;
 }
 /*# sourceMappingURL=main.css.map */

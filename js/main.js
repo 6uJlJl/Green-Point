@@ -1,11 +1,15 @@
 $(function (){
 
+// Секция ABOUT
+
   $(".about__more").click(function (event) {
     event.preventDefault();
     $(".about__more").hide();
     $(".about__hidden").removeClass("about__hidden")
   })
 
+// Секция OFFER
+// Слайдер карточек
   $(".offer__items").slick({
     dots: false,
     slidesToShow: 3,
@@ -33,6 +37,18 @@ $(function (){
     prevArrow: '<div class="offer__left"></div>',
     nextArrow: '<div class="offer__right"></div>',
   });
+
+// Секция Photos
+// Слайдер галереи
+$(".photos__items").slick({
+  dots: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: '<div class="offer__left photos__btn--left"></div>',
+  nextArrow: '<div class="offer__right photos__btn--right"></div>',
+});
+
 
 
 })

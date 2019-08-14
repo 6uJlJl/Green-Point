@@ -1,0 +1,90 @@
+.photos
+  &__title
+    font-size: 50px
+    +f700
+    line-height: 50px
+    letter-spacing: 1.5px
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      height: 10px
+      width: 367px
+      background-color: $title-bg
+      left: 0
+      bottom: 8px
+      z-index: -1
+  &__slide
+    display: flex !important
+    margin-bottom: 90px
+  &__left
+    display: flex
+    flex-basis: 33%
+    position: relative
+    img
+      margin: 15px
+    &::after
+      content: ''
+      position: absolute
+      width: 25px
+      height: 25px
+      background: url("../img/icons.png") no-repeat center
+      background-position-x: -156px
+      background-position-y: 0px
+      top: 35px
+      left: 35px
+      cursor: pointer
+  &__right
+    display: flex
+    flex-direction: column
+    flex-basis: 66%
+  &__top
+    display: flex
+    img
+      margin: 15px
+    &--left
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        width: 25px
+        height: 25px
+        background: url("../img/icons.png") no-repeat center
+        background-position-x: -156px
+        background-position-y: 0px
+        top: 35px
+        left: 35px
+        cursor: pointer
+    &--right
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        width: 25px
+        height: 25px
+        background: url("../img/icons.png") no-repeat center
+        background-position-x: -156px
+        background-position-y: 0px
+        top: 35px
+        left: 35px
+        cursor: pointer
+  &__bottom
+    position: relative
+    img
+      margin: 15px
+    &::after
+      content: ''
+      position: absolute
+      width: 25px
+      height: 25px
+      background: url("../img/icons.png") no-repeat center
+      background-position-x: -156px
+      background-position-y: 0px
+      top: 35px
+      left: 35px
+      cursor: pointer
+  &__btn
+    &--left
+      top: -90px
+    &--right
+      top: -90px
