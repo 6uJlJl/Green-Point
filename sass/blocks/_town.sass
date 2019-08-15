@@ -49,3 +49,57 @@
   padding-bottom: 100px
   background-color: $section-bg
 
+@media (max-width: 1200px)
+  .town
+    &__filters
+      justify-content: space-around
+      flex-wrap: wrap
+    &__filter
+      margin-bottom: 30px
+    &__items
+      justify-content: space-around
+  .town__items .offer__item
+    &:not(:nth-child(3n))
+      margin-right: 0
+@media (max-width: 1024px)
+  .town
+    &__filters
+      margin-bottom: 0
+@media (max-width: 768px)
+  .town
+    &__filters
+      justify-content: flex-start
+    &__buttons
+      display: flex
+      flex-direction: column
+      align-items: center
+      a
+        width: 300px
+    &__items
+      margin-bottom: 0
+    &__btn--order
+      margin: 30px
+    &__btn--want
+      padding-left: 20px
+      padding-right: 20px
+@media (max-width: 576px)
+  .filter
+    &__btn
+      font-size: 12px
+      line-height: 24px
+      padding: 10px 7px
+      border-radius: 40px
+      border: 1px solid $why-title
+      margin-right: 10px
+      cursor: pointer
+@media (max-width: 425px)
+  .town
+    &__filter
+      flex-basis: 100%
+  .filter
+    &__buttons
+      text-align: center
+      display: flex
+      flex-direction: column
+    &__btn
+      margin-bottom: 5px

@@ -3,6 +3,7 @@
   background: url("../img/best/best-bg.jpg") no-repeat center
   background-size: cover
   padding-top: 55px
+  padding-bottom: 60px
   &__title
     color: #ffffff
     font-size: 35px
@@ -24,3 +25,13 @@
     +f300
     line-height: 50px
     letter-spacing: 0.45px
+
+@media (max-width: 1200px)
+  .best
+    &__items
+      flex-wrap: wrap
+      justify-content: space-around
+    &__address
+      display: block
+    &__title
+      text-align: center

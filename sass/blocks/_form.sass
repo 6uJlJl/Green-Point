@@ -1,3 +1,6 @@
+.form-section
+  .container
+    position: relative
 .form
   max-width: 1000px
   min-height: 578px
@@ -7,6 +10,8 @@
   padding: 80px 120px 130px
   text-align: center
   margin-bottom: 100px
+  &-section
+    overflow: hidden
   &__title
     color: #000000
     font-size: 28px
@@ -48,3 +53,56 @@
     line-height: 24px
     margin-bottom: 42px
 
+.birds1
+  position: absolute
+  width: 145px
+  height: 131px
+  background: url(../img/form/birds1.png) no-repeat center
+  top: 100px
+  left: 0px
+.birds2
+  position: absolute
+  width: 233px
+  height: 229px
+  background: url(../img/form/birds2.png) no-repeat center
+  top: 350px
+  right: -50px
+
+@media (max-width: 1024px)
+  .birds1
+    display: none
+  .birds2
+    display: none
+  .form
+    padding: 40px 60px 60px;
+    &__title
+      font-size: 22px
+      line-height: 40px
+    &__inputs
+      width: 35vw
+    &__textarea
+      min-width: 35vw
+      max-width: 35vw
+      height: 132px
+@media (max-width: 768px)
+  .form
+    padding: 20px 30px 30px
+@media (max-width: 576px)
+  .form
+    &__input-items
+      flex-direction: column
+    &__inputs
+      width: 100%
+    &__textarea
+      min-width: 100%
+      max-width: 100%
+    &__title
+      font-size: 14px
+      line-height: 30px
+@media (max-width: 425px)
+  .form
+    &__btn
+      padding-left: 10px
+      padding-right: 10px
+      width: 200px
+      font-size: 12px

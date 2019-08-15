@@ -3,6 +3,9 @@
   background-size: cover
   height: 950px
   padding: 30px 0 128px
+  overflow: hidden
+  .container
+    position: relative
   &__wrapper
     display: flex
   &__logo
@@ -31,6 +34,21 @@
     margin-right: 29px
   &__btn
     width: 225px
+  &__burger
+    display: none
+    height: 28px
+    width: 40px
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(19%, $title-bg), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(41%, $title-bg), color-stop(60%, $why-title), color-stop(61%, transparent), color-stop(79%, transparent), color-stop(80%, $why-title))
+    background: -o-linear-gradient(bottom, $title-bg 19%, transparent 20%, transparent 40%, $title-bg 41%, $why-title 60%, transparent 61%, transparent 79%, $why-title 80%)
+    background: linear-gradient(to top, $title-bg 19%, transparent 20%, transparent 40%, $title-bg 41%, $why-title 60%, transparent 61%, transparent 79%, $why-title 80%)
+    cursor: pointer
+    margin-right: 30px
+    &--active
+      height: 28px
+      width: 40px
+      background: -o-linear-gradient(45deg, transparent 45%, $title-bg 46%, $why-title 55%, transparent 56%), -o-linear-gradient(135deg, transparent 45%, $why-title 46%, $title-bg 55%, transparent 56%)
+      background: linear-gradient(45deg, transparent 45%, $title-bg 46%, $why-title 55%, transparent 56%), linear-gradient(-45deg, transparent 45%, $why-title 46%, $title-bg 55%, transparent 56%)
+
   &__nav
     margin-left: 30px
     margin-top: 8px
@@ -103,3 +121,151 @@
     line-height: 39px
     vertical-align: middle
 
+.leaf
+  position: absolute
+.leaf-1
+  width: 64px
+  height: 52px
+  background: url(../img/header/leaf-1.png) no-repeat center
+  top: 200px
+  left: 229px
+.leaf-2
+  width: 103px
+  height: 60px
+  background: url(../img/header/leaf-2.png) no-repeat center
+  top: 280px
+  left: 636px
+.leaf-3
+  width: 54px
+  height: 41px
+  background: url(../img/header/leaf-3.png) no-repeat center
+  top: 417px
+  left: -40px
+.leaf-4
+  width: 38px
+  height: 47px
+  background: url(../img/header/leaf-4.png) no-repeat center
+  top: 569px
+  left: 261px
+
+@media (max-width: 1200px)
+  .header
+    &__nav
+      ul
+        li
+          font-size: 16px
+  .bottom
+    &__text
+      font-size: 14px
+
+@media (max-width: 1024px)
+  .header
+    &__burger
+      display: block
+    &__contacts
+      justify-content: space-between
+      align-items: center
+    &__callback
+      width: 225px
+    &__phone
+      text-align: center
+    &__office
+      margin-left: 15px
+      font-size: 13px
+      line-height: 30px
+      +f800
+    &__nav
+      display: none
+    &__right
+      margin-top: 0
+    &__bottom
+      ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        li
+          margin-bottom: 10px
+          flex-basis: 50%
+    .leaf-1
+      display: none
+    .leaf-2
+      display: none
+    .leaf-3
+      display: none
+    .leaf-4
+      display: none
+@media (max-width: 768px)
+  .header
+    &__burger
+      margin-right: 0
+    &__logo
+      min-width: 80px
+      min-height: 65px
+    &__office
+      margin-left: 10px
+      font-size: 13px
+      line-height: 25px
+      +f500
+      max-width: 150px
+    &__phone
+      font-size: 19px
+      margin-right: 0px
+      margin-top: 0
+      padding-top: 0
+    &__btn
+      width: 180px
+      font-size: 13px
+      text-align: center
+      padding-left: 20px
+      padding-right: 20px
+@media (max-width: 576px)
+  .header
+    &__burger
+      margin-left: -15px
+      width: 50px
+    &__logo
+      position: relative
+      margin: 0
+    &__office
+      position: absolute
+      left: 0
+      top: 100px
+      text-align: left
+      max-width: 100%
+    &__callback
+      width: auto
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+    &__contacts
+      justify-content: flex-end
+    &__title
+      font-size: 45px
+    &__subtitle
+      font-size: 17px
+    &__price
+      display: block
+      max-width: 260px
+    &__bottom
+      margin-top: 170px
+      ul
+        li
+          flex-basis: 100%
+@media (max-width: 425px)
+  .header
+    &__phone
+      font-size: 14px
+    &__office
+      display: none
+    &__phone
+      display: block
+      margin: -15px 0 -10px
+    &__btn
+      width: 130px
+      padding: 0
+      font-size: 11px
+    &__logo
+      min-width: 60px
+      min-height: 50px
+    &__title
+      font-size: 31px

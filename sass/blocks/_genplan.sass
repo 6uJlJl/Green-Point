@@ -20,3 +20,17 @@
       left: calc( 50% - 472px/2 )
       bottom: 8px
       z-index: -1
+
+@media (max-width: 1024px)
+  .genplan
+    &__title
+      font-size: 40px
+      &:after
+        left: calc( 50% - 383px/2);
+        width: 383px
+@media (max-width: 576px)
+  .genplan
+    &__title
+      font-size: 37px
+      &:after
+        width: 0

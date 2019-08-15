@@ -33,3 +33,35 @@
     letter-spacing: 0.36px
     height: 40px
     line-height: 30px
+
+@media (max-width: 1200px)
+  .footer
+    &__nav
+      font-size: 13px
+      ul
+        li
+          margin: 0 7px
+@media (max-width: 1024px)
+  .footer
+    &__nav
+      ul
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        li
+          margin: 10px 0
+@media (max-width: 576px)
+  .footer
+    padding: 20px
+    position: relative
+    &__wrapper
+      align-items: flex-start
+    &__callback
+      position: absolute
+      bottom: 20px
+@media (max-width: 425px)
+  .footer
+    &__nav
+      margin-bottom: 70px
+    &__callback
+      left: 20%
