@@ -52,10 +52,32 @@ $(function (){
   // Fancybox
   $(".btn").fancybox();
   $(".header__excursion").fancybox();
-  $(".structure__link").fancybox();
   $(".offer__link").fancybox();
   $(".offer__btn").fancybox();
   $(".offer__a").fancybox();
+
+  $(".structure__link").on('click', function() {
+    var string = '<div class="structure-popup"><div class="structure-popup-wrapper"><img class="structure-popup-image" src="'+$(this).data("image")+'" alt="'+$(this).data("title")+'"><div class="structure-popup-right"><h3 class="structure-popup-title">'+$(this).data("title")+'</h3><p class="structure-popup-text">'+$(this).data("text")+'</p><p class="structure-popup-link"><a href="'+$(this).data("link")+'">'+$(this).data("link-text")+'</a></p></div></div></div>';
+    $.fancybox.open({
+      src : string,
+      type : 'html',
+      smallBtn : true
+    });
+  });
+
+  $(".form").on('submit', function(event) {
+    event.preventDefault();
+    var string = '<div class="popup"><div class="popup-wrapper"><p class="popup__title">Спасибо за вашу заявку!</p><label class="popup__input-label">Мы скоро свяжемся с Вами</label><input class="btn btn--transparent" onclick="$.fancybox.close()" type="button" value="Ок"></div></div>';
+    $.fancybox.open({
+      src : string,
+      type : 'html',
+      smallBtn : true
+    });
+  });
+
+  $(".myfancyboxclose").click(function(){
+    $.fancybox.close();
+  })
 
   // Скролл от меню
   function goToSelector (selector) {
@@ -276,6 +298,8 @@ $(function (){
   }
 
   $(window).resize(function(){
+    $(".header__nav ul").removeClass("show");
+    $(".header__burger").removeClass("header__burger--active");
     if ($(window).width() < 769) {
       hideStructures(true);
       hideOffers(".towns", true);
@@ -288,10 +312,27 @@ $(function (){
       hideOffers(".apps", false);
       hideOffers(".houss", false);
     }
-
-
   })
 
+  // Управление МЕНЮ
+  $(window).scroll(function(){
+    $(".header__burger").removeClass("header__burger--active")
+    $(".header__nav ul").removeClass("show")
+  })
 
+  $(".header__burger").click (function(){
+    $(".header__burger").toggleClass("header__burger--active")
+    $(".header__nav ul").toggleClass("show")
+  })
+  $(".header__nav li").click (function(){
+    $(".header__nav ul").toggleClass("show")
+  })
+  $("body").click (function(event){
+    if (!($(".header__nav ul").hasClass("show"))){
+      if (!(event.target.parentNode.parentNode.classList.contains("header__nav")||event.target.parentNode.classList.contains("header__nav"))) {
+        $(".header__nav ul").removeClass("show")
+      }
+    }
 
+  })
 })

@@ -36,6 +36,8 @@
     width: 225px
   &__burger
     display: none
+    margin-left: -15px
+    margin-top: -15px
     height: 28px
     width: 40px
     background: -webkit-gradient(linear, left bottom, left top, color-stop(19%, $title-bg), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(41%, $title-bg), color-stop(60%, $why-title), color-stop(61%, transparent), color-stop(79%, transparent), color-stop(80%, $why-title))
@@ -162,6 +164,8 @@
   .header
     &__burger
       display: block
+      z-index: 100
+      position: fixed
     &__contacts
       justify-content: space-between
       align-items: center
@@ -175,7 +179,20 @@
       line-height: 30px
       +f800
     &__nav
-      display: none
+      ul
+        position: fixed
+        z-index: 99
+        background-color: #fff
+        left: 0
+        top: -30px
+        display: flex
+        flex-direction: column
+        padding: 80px 50px 30px 30px
+        transform: translateX(-100%)
+        transition: 0.5s
+      ul.show
+        transform: translateX(0)
+        transition: 0.5s
     &__right
       margin-top: 0
     &__bottom
@@ -196,8 +213,6 @@
       display: none
 @media (max-width: 768px)
   .header
-    &__burger
-      margin-right: 0
     &__logo
       min-width: 80px
       min-height: 65px
@@ -220,9 +235,6 @@
       padding-right: 20px
 @media (max-width: 576px)
   .header
-    &__burger
-      margin-left: -15px
-      width: 50px
     &__logo
       position: relative
       margin: 0
