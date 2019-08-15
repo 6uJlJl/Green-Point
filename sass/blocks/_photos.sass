@@ -10,17 +10,17 @@
     line-height: 50px
     letter-spacing: 1.5px
     position: relative
-    &:after
-      content: ""
-      position: absolute
-      height: 10px
-      width: 367px
-      background-color: $title-bg
-      left: 0
-      bottom: 8px
-      z-index: -1
   &__slide
     display: flex !important
+  &__items
+    &--small
+      a
+        display: flex !important
+        justify-content: center
+        align-items: center
+        img
+          width: 100vw
+          height: 100vw
   &__left
     display: flex
     width: 360px
@@ -28,17 +28,6 @@
     overflow: hidden
     margin-right: 30px
     position: relative
-    &::after
-      content: ''
-      position: absolute
-      width: 25px
-      height: 25px
-      background: url("../img/icons.png") no-repeat center
-      background-position-x: -156px
-      background-position-y: 0px
-      top: 20px
-      left: 20px
-      cursor: pointer
   &__right
     display: flex
     flex-direction: column
@@ -50,50 +39,30 @@
       height: 360px
       overflow: hidden
       margin-right: 30px
-      &::after
-        content: ''
-        position: absolute
-        width: 25px
-        height: 25px
-        background: url("../img/icons.png") no-repeat center
-        background-position-x: -156px
-        background-position-y: 0px
-        top: 20px
-        left: 20px
-        cursor: pointer
     &--right
       position: relative
       width: 360px
       height: 360px
       overflow: hidden
-      &::after
-        content: ''
-        position: absolute
-        width: 25px
-        height: 25px
-        background: url("../img/icons.png") no-repeat center
-        background-position-x: -156px
-        background-position-y: 0px
-        top: 20px
-        left: 20px
-        cursor: pointer
   &__bottom
     position: relative
     width: 750px
     height: 364px
     margin-top: 30px
     overflow: hidden
-    &::after
-      content: ''
-      position: absolute
-      width: 25px
-      height: 25px
-      background: url("../img/icons.png") no-repeat center
-      background-position-x: -156px
-      background-position-y: 0px
-      top: 20px
-      left: 20px
-      cursor: pointer
+  &__slide
+    a
+      &::after
+        content: ''
+        position: absolute
+        width: 25px
+        height: 25px
+        background: url("../img/icons.png") no-repeat center
+        background-position-x: -156px
+        background-position-y: 0px
+        top: 20px
+        left: 20px
+        cursor: pointer
   &__btn
     &--left
       top: -90px
@@ -141,9 +110,24 @@
 @media (max-width: 768px)
   .leavesph
     display: none
+@media (max-width: 576px)
+  .photos
+    &__title
+      margin-bottom: 30px
+.slick-dots li button
+  margin-top: 20px
+  background-color: #cccccc
+  width: 10px
+  height: 10px
+  border-radius: 30px
+  text-indent: -9999px
+  overflow:hidden
+li.slick-active button
+  background-color: $why-title
 @media (max-width: 425px)
   .photos
     &__title
       font-size: 34px
     &:after
       width: 0
+

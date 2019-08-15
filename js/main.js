@@ -49,6 +49,16 @@ $(function (){
     nextArrow: '<div class="offer__right photos__btn--right"></div>',
   });
 
+  $(".photos__items--small").slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    // prevArrow: '<div class="offer__left photos__btn--left"></div>',
+    // nextArrow: '<div class="offer__right photos__btn--right"></div>',
+  });
+
   // Fancybox
   $(".btn").fancybox();
   $(".header__excursion").fancybox();
@@ -290,12 +300,20 @@ $(function (){
 
   }
 
+  // РАЗМЕРЫ экрана и РЕСАЙЗ
+
   if ($(window).width() < 769) {
     hideStructures(true);
     hideOffers(".towns", true);
     hideOffers(".apps", true);
     hideOffers(".houss", true);
   }
+
+  if ( $(window).width() < 577) {
+    $(".photos__items--small").removeClass("hidden");
+    $(".photos__items").addClass("hidden");
+  }
+
 
   $(window).resize(function(){
     $(".header__nav ul").removeClass("show");
@@ -311,6 +329,13 @@ $(function (){
       hideOffers(".towns", false);
       hideOffers(".apps", false);
       hideOffers(".houss", false);
+    }
+    if ( $(window).width() < 577) {
+      $(".photos__items--small").removeClass("hidden");
+      $(".photos__items").addClass("hidden");
+    } else {
+      $(".photos__items--small").addClass("hidden");
+      $(".photos__items").removeClass("hidden");
     }
   })
 
