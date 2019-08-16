@@ -23,15 +23,12 @@ $(function (){
           }
         },
         {
-          breakpoint: 577,
+          breakpoint: 768,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
           }
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ],
       arrows: true,
       prevArrow: '<div class="offer__left"></div>',
@@ -55,14 +52,48 @@ $(function (){
     speed: 500,
     fade: true,
     cssEase: 'linear',
-    // prevArrow: '<div class="offer__left photos__btn--left"></div>',
-    // nextArrow: '<div class="offer__right photos__btn--right"></div>',
+  });
+
+
+
+  // Слайдер в popup OFFER
+
+  $(".offer__link").on('click', function() {
+    var string = '<div id="offer-popup" class="offer-popup"><div class="offer-popup-wrapper"><div class="offer-popup-left"><div class="offer-popup-slider-for"><img src="'+$(this).data("image1")+'" alt=""><img src="'+$(this).data("image2")+'" alt=""><img src="'+$(this).data("image3")+'" alt=""><img src="'+$(this).data("image4")+'" alt=""><img src="'+$(this).data("image5")+'" alt=""></div><br><div class="offer-popup-images"><img src="'+$(this).data("image1")+'" alt=""><img src="'+$(this).data("image2")+'" alt=""><img src="'+$(this).data("image3")+'" alt=""><img src="'+$(this).data("image4")+'" alt=""><img src="'+$(this).data("image5")+'" alt=""></div></div><div class="offer-popup-right"><h3 class="offer-popup-title">'+$(this).data("title")+'</h3><div class="offer-popup-ads"><span class="offer-popup-ad"><span class="offer-popup-ad--m2"></span>'+$(this).data("adM2")+'</span><span class="offer-popup-ad"><span class="offer-popup-ad--key"></span>'+$(this).data("adKey")+'</span><span class="offer-popup-ad"><span class="offer-popup-ad--pool"></span>'+$(this).data("adPool")+'</span><span class="offer-popup-ad"><span class="offer-popup-ad--sot"></span>'+$(this).data("adSot")+'</span><span class="offer-popup-ad"><span class="offer-popup-ad--bed"></span>'+$(this).data("adBed")+'</span><span class="offer-popup-ad"><span class="offer-popup-ad--place"></span>'+$(this).data("adPlace")+'</span></div><span class="offer-popup-line"></span><p class="offer-popup-price-rub">'+$(this).data("priceRub")+' Р</p><p class="offer-popup-price-doll">'+$(this).data("priceDoll")+' $</p><span class="offer-popup-line"></span><form class="offer-popup-form" action="post"><p class="offer-popup-form-title">Записаться на просмотр дома</p><input class="popup__input-text" type="text" name="offer-popup-name" placeholder="Имя*" required><input class="popup__input-text" type="text" name="offer-popup-phone" placeholder="Телефон*" required><input class="btn" type="submit" value="Отправить"></form></div></div></div>';
+    $.fancybox.open({
+      src : string,
+      type : 'html',
+      smallBtn : true,
+      touch: {
+        vertical: true, // Allow to drag content vertically
+        momentum: true // Continue movement after releasing mouse/touch when panning
+      },
+      opts : {
+        afterLoad : function() {
+          $('.offer-popup-images').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.offer-popup-slider-for',
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true,
+          });
+          $('.offer-popup-slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.offer-popup-images',
+          });
+        }
+      }
+
+    })
   });
 
   // Fancybox
   $(".btn").fancybox();
   $(".header__excursion").fancybox();
-  $(".offer__link").fancybox();
   $(".offer__btn").fancybox();
   $(".offer__a").fancybox();
 
@@ -211,16 +242,16 @@ $(function (){
       distY3 = mousePos.y - boxerCenterY3;
       distX4 = mousePos.x - boxerCenterX4,
       distY4 = mousePos.y - boxerCenterY4;
-      if (Math.abs(distX1) < 1000 && distY1 < 660 && fluidboxer.matches) {
+      if (Math.abs(distX1) < 10000 && Math.abs(distY1) < 2000 && fluidboxer.matches) {
         leaf1.style.transform = "translate("+(-1*distX1)/15+"px,"+(-1*distY1)/15+"px)";
       }
-      if (Math.abs(distX2) < 1000 && distY2 < 660 && fluidboxer.matches) {
+      if (Math.abs(distX2) < 10000 && Math.abs(distY2) < 2000 && fluidboxer.matches) {
         leaf2.style.transform = "translate("+(-1*distX2)/15+"px,"+(-1*distY2)/15+"px)";
       }
-      if (Math.abs(distX3) < 1000 && distY3 < 660 && fluidboxer.matches) {
+      if (Math.abs(distX3) < 10000 && Math.abs(distY3) < 2000 && fluidboxer.matches) {
         leaf3.style.transform = "translate("+(-1*distX3)/15+"px,"+(-1*distY3)/15+"px)";
       }
-      if (Math.abs(distX4) < 1000 && distY4 < 660 && fluidboxer.matches) {
+      if (Math.abs(distX4) < 10000 && Math.abs(distY4) < 2000 && fluidboxer.matches) {
         leaf4.style.transform = "translate("+(-1*distX4)/15+"px,"+(-1*distY4)/15+"px)";
       }
     }
@@ -286,27 +317,20 @@ $(function (){
     hideStructures(false);
   })
 
-  // При экране <768px оставляем только по 3 элемента
-  // в TOWN,
-  function hideOffers (selector, isShown) {
-    var items = $(selector);
-    for (var i=0; i<items.length; i++){
-        if (i > 2) {
-          isShown
-            ? items[i].classList.add("hidden")
-            : items[i].classList.remove("hidden");
-        }
+  // Клик по ФИЛЬТРУ
+  $(".filter__buttons").on("click", function(event){
+    if (!event.target.classList.contains("filter__buttons")) {
+      $(this).find(".filter__btn").each(function(){
+        $(this).removeClass("filter__active");
+      })
+      event.target.classList.add("filter__active");
     }
-
-  }
+  })
 
   // РАЗМЕРЫ экрана и РЕСАЙЗ
 
   if ($(window).width() < 769) {
     hideStructures(true);
-    hideOffers(".towns", true);
-    hideOffers(".apps", true);
-    hideOffers(".houss", true);
   }
 
   if ( $(window).width() < 577) {
@@ -320,15 +344,9 @@ $(function (){
     $(".header__burger").removeClass("header__burger--active");
     if ($(window).width() < 769) {
       hideStructures(true);
-      hideOffers(".towns", true);
-      hideOffers(".apps", true);
-      hideOffers(".houss", true);
     }
     else {
       hideStructures(false);
-      hideOffers(".towns", false);
-      hideOffers(".apps", false);
-      hideOffers(".houss", false);
     }
     if ( $(window).width() < 577) {
       $(".photos__items--small").removeClass("hidden");
@@ -340,9 +358,17 @@ $(function (){
   })
 
   // Управление МЕНЮ
+  var navbar = document.querySelector(".header__nav");
+  var sticky = navbar.offsetTop;
+
   $(window).scroll(function(){
-    $(".header__burger").removeClass("header__burger--active")
-    $(".header__nav ul").removeClass("show")
+    if ($(window).width()>1024) {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      };
+    }
   })
 
   $(".header__burger").click (function(){
@@ -350,6 +376,7 @@ $(function (){
     $(".header__nav ul").toggleClass("show")
   })
   $(".header__nav li").click (function(){
+    $(".header__burger").toggleClass("header__burger--active")
     $(".header__nav ul").toggleClass("show")
   })
   $("body").click (function(event){
